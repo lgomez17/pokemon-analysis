@@ -1,0 +1,24 @@
+{
+  "name": "pokemon-analysis",
+  "version": "1.0.0",
+  "description": "CSV Pokemon Dataset (https://www.kaggle.com/code/swashbuckler1/pokemon-exploration-with-plotly/data?select=Pokemon.csv)\r Working with CSV in JS (https://www.youtube.com/watch?v=95wAbrQAm5g)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgomez17/pokemon-analysis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lgomez17/pokemon-analysis/issues"
+  },
+  "homepage": "https://github.com/lgomez17/pokemon-analysis#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "json2csv": "^5.0.7"
+  }
+}
