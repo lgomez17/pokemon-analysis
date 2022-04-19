@@ -5,16 +5,17 @@ csv = fs.readFileSync("pokemon.csv")
 
 // Convert the data to String and
 // split it in an array
-var array = csv.toString().split("\r");
+var array = csv.toString().split("\n");
 
 // All the rows of the CSV will be
 // converted to JSON objects which
 // will be added to result in an array
-let result = [];
+let result = {};
 
 // The array[0] contains all the
 // header columns so we store them
 // in headers array
+console.log("my first rowww", array[0])
 let headers = array[0].split(", ")
 
 // Since headers are separated, we
@@ -71,7 +72,9 @@ for (let j in headers) {
 result.push(obj)
 }
 
+
+
 // Convert the resultant array to json and
 // generate the JSON output file.
 let json = JSON.stringify(result);
-fs.writeFileSync('output.json', json);
+fs.writeFileSync('pokeOutput.json', json);
