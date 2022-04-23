@@ -1,3 +1,44 @@
+let pokemonDefense = data.sort((a, b) => b.Defense - a.Defense);
+pokemonname = data.map(object => object.name)
+slicedPokeNames = pokemonname.slice(0, 50)
+
+// Bubble chart 
+var trace0 = {
+  x: slicedPokeNames,
+  y: data.map(object => object.Defense),
+  mode: 'markers',
+
+  marker: {
+    color: ['rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)','rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)','rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)', 'rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)'],
+    opacity: [1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4,],
+    size: 18,
+  }
+};
+
+var data3 = [trace0];
+
+var layout2 = {
+  title: 'Defense Levels',
+  showlegend: false,
+  height: 700,
+  autowidth: true,
+    yaxis: {
+    tickmode: 'array',
+    automargin: true,
+    titlefont: { size:30 },
+  },
+  xaxis: {
+    tickmode: 'array',
+    automargin: true,
+    titlefont: { size:30 },
+  },
+
+};
+
+Plotly.newPlot('plot3', data3, layout2);
+
+
+
 var button = d3.select("#click-me");
 
 // derived sample code from wk14 activity 2 lesson 9 
@@ -38,64 +79,12 @@ let layout = {
 // Render the plot to the div tag with id "plot"
 Plotly.newPlot("plot", traceData, layout);
 
-
-
-
-
-
-
-// // start second plot
-// let pokemonGeneration = data.sort((a, b) => b.Gen - a.Gen);
-
-// // Slice the first 10 objects for plotting
-// slicedData = pokemonGeneration.slice(0, 20);
-
-// // Reverse the array to accommodate Plotly's defaults
-// reversedData = slicedData.reverse();
-
-// Trace2 for the Data
-// let trace2 = {
-//   x: reversedData.map(object => object.Gen),
-//   y: reversedData.map(object => object.name),
-//   text: reversedData.map(object => object.name),
-//   name: "Pokemon",
-//   type: "bar",
-//   orientation: "h"
-// };
-
-// // Data array
-// // `data` has already been defined, so we must choose a new name here:
-// let traceData2 = [trace2];
-
-// // Apply a title to the layout
-// let layout2 = {
-//   title: "Top 25 Pokémon with Highest Base Attack",
-//   margin: {
-//     l: 350,
-//     r: 150,
-//     t: 70,
-//     b: 75
-//   }
-// };
-
-// // Render the plot to the div tag with id "plot"
-// Plotly.newPlot("plot2", traceData, layout2);
-
 // Event handlers are just normal functions that can do anything you want
-button.on("click", function() {
+button.on("click", function () {
   d3.select(".giphy-me").html("<img src='https://gph.to/2Krfn0w' alt='giphy'>");
 });
 
-// var data = [{
-//     values: [19, 26, 55],
-//     labels: ['Residential', 'Non-Residential', 'Utility'],
-//     type: 'pie'
-//   }];
-
-
-
 // pie chart 
-
 console.log("data types", data[0].type1)
 
 fire = 0,
@@ -221,11 +210,12 @@ var data2 = [{
 }];
 
 var layout2 = {
-  height: 700,
+  height: 600,
   width: 600,
-  margin: {"t": 25, "b": 10, "l": 10, "r": 10},
-  title: "Pokemon Types",
+  margin: { "t": 40, "b": 10, "l": 10, "r": 10 },
+  title: "Pokémon Types",
   showlegend: true
 };
 
 Plotly.newPlot("plot2", data2, layout2);
+
