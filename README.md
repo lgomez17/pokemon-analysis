@@ -26,4 +26,10 @@ Free favicon (https://pixabay.com/illustrations/pokeball-pokemon-game-ball-15943
 
 Center Elements Vertically (https://www.w3schools.com/howto/howto_css_center-vertical.asp)
 
+Background Image (https://www.w3schools.com/cssref/css3_pr_background-size.asp)
+
+Background picture (https://wallpaperaccess.com/pokemon-hd)
+
+
+
 Thank you @ tutor for providing assistance 
