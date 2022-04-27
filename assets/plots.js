@@ -18,7 +18,7 @@ var trace0 = {
 var data3 = [trace0];
 
 var layout2 = {
-  title: 'Defense Levels',
+  title: 'Top 50 Defensive Pokémon',
   showlegend: false,
   height: 700,
   autowidth: true,
