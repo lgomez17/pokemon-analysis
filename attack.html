@@ -70,5 +70,44 @@
   <div hidden id="plot3"></div>
   <script src="/assets/data.js"></script>
   <script src="/assets/plots.js"></script>
+  <script>
+    let pokemonAttack = data.sort((a, b) => b.Atk - a.Atk);
+
+    // Slice the first 20 objects for plotting
+    slicedData = pokemonAttack.slice(0, 20);
+
+    // Reverse the array to accommodate Plotly's defaults
+    reversedData = slicedData.reverse();
+
+    // Trace1 for the attack data
+    let trace1 = {
+      x: reversedData.map(object => object.Atk),
+      y: reversedData.map(object => object.name),
+      text: reversedData.map(object => object.name),
+      name: "Pokemon",
+      type: "bar",
+      orientation: "h"
+    };
+
+    // Data array
+    // `data` has already been defined, so we must choose a new name here:
+    let traceData = [trace1];
+
+    // Apply a title to the layout
+    let layout = {
+      title: "Top 20 Pokémon with Highest Base Attack",
+      margin: {
+        l: 350,
+        r: 150,
+        t: 70,
+        b: 75
+      }
+    };
+
+    // Render the plot to the div tag with id "plot"
+    Plotly.newPlot("plot", traceData, layout);
+
+  </script>
 </body>
+
 </html>
