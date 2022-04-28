@@ -75,7 +75,45 @@
   <script src="/assets/data.js"></script>
   <script src="/assets/plots.js"></script>
   <script>
+    let pokemonDefense = data.sort((a, b) => b.Defense - a.Defense);
+    pokemonname = data.map(object => object.name)
+    slicedPokeNames = pokemonname.slice(0, 50)
+
+    // Bubble chart 
+    var trace0 = {
+      x: slicedPokeNames,
+      y: data.map(object => object.Defense),
+      mode: 'markers',
+
+      marker: {
+        color: ['rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54),rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)', 'rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)', 'rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)', 'rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)'],
+        opacity: [1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4, 1, 0.8, 0.6, 0.4,],
+        size: 18,
+      }
+    };
+
+    var data3 = [trace0];
+
+    var layout2 = {
+      title: 'Top 50 Defensive Pokémon',
+      showlegend: false,
+      height: 700,
+      autowidth: true,
+      yaxis: {
+        tickmode: 'array',
+        automargin: true,
+        titlefont: { size: 30 },
+      },
+      xaxis: {
+        tickmode: 'array',
+        automargin: true,
+        titlefont: { size: 30 },
+      },
+
+    };
+
     Plotly.newPlot('plot3', data3, layout2);
   </script>
 </body>
+
 </html>
