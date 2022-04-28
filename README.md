@@ -2,6 +2,9 @@
 ## Summary
 My project consists of plotly charts that analyze pokemon species. 
 
+![barchart](https://user-images.githubusercontent.com/91432220/165863066-1f5e98fc-e87b-4cfe-b709-c3a861111fce.png)
+![bubblechart](https://user-images.githubusercontent.com/91432220/165863067-1f304b34-d54e-4d0b-bad7-85b908869e46.png)
+![piechart](https://user-images.githubusercontent.com/91432220/165863068-40669ef7-37ad-48c7-a198-b2d0f19a69ce.png)
 
 ## Links
 CSV Pokemon Dataset (https://www.kaggle.com/code/swashbuckler1/pokemon-exploration-with-plotly/data?select=Pokemon.csv)
@@ -33,3 +36,4 @@ Background picture (https://wallpaperaccess.com/pokemon-hd)
 
 
 Thank you @ tutor for providing assistance 
+
